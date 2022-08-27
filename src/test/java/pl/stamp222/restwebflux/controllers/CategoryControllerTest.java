@@ -31,7 +31,7 @@ class CategoryControllerTest {
                         Category.builder().description("Cat2").build())
         );
 
-        testWebClient.get().uri("/api/v1/categories/")
+        testWebClient.get().uri("/api/v1/categories")
                 .exchange()
                 .expectBodyList(Category.class)
                 .hasSize(2);
